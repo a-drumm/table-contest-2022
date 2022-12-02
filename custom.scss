@@ -1,0 +1,68 @@
+
+/*-- scss:defaults --*/
+
+//
+// Color system
+//
+
+$peach-custom: #f9bc9c !default;
+$green-custom: #9fd28d !default;
+$purple-custom: #786895 !default;
+
+// Fonts
+
+$font-family-monospace:  "Fira Code", "Lucida Console", Courier, monospace !default;
+$headings-font-weight:      400 !default;
+
+// Code
+
+$code-color: $purple-custom;
+
+// Callouts
+
+$callout-color-tip: $peach-custom;
+
+/*-- scss:rules --*/
+
+// Variables
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;400;700&display=swap" !default;
+@if $web-font-path {
+  @import url($web-font-path);
+}
+
+// Headings
+
+h3 {
+  margin-bottom: 1.5em;
+}
+
+code {
+  font-weight: 500;
+}
+
+p code:not(.sourceCode), li code:not(.sourceCode) {
+    font-weight: 600;
+}
+
+h2, .h2 {
+    border-bottom: 1.5px solid #9fd28d;
+}
+
+.sourceCode {
+  font-weight: 400;
+}
+
+a {
+  color: $green-custom
+}
+
+.sidebar nav[role=doc-toc] ul>li>a.active {
+    border-left: 1px solid $green-custom;
+    color: $green-custom !important;
+}
+
+.sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+    border-left: 1px solid $green-custom;
+    color: $green-custom !important;
+}
